@@ -5,7 +5,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f5f5f7">
-<meta name="description" content="SariToolset مجموعة تطبيقات أندرويد تشمل أدوات الخصوصية والاتصال، والترجمة والدبلجة، والبرمجة، والتصوير الفلكي ومعالجة الصور.">
+<meta name="description" content="SariToolset مجموعة تطبيقات أندرويد وأدوات عملية للخصوصية والبرمجة والترجمة والتصوير الفلكي.">
 <meta name="robots" content="index,follow,max-image-preview:large">
 <link rel="canonical" href="https://saritoolset.github.io/">
 
@@ -14,7 +14,7 @@
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="SariToolset">
 <meta property="og:title" content="SariToolset | تطبيقات وأدوات أندرويد">
-<meta property="og:description" content="اكتشف مجموعة تطبيقات SariToolset وأدواتها للهواتف الذكية.">
+<meta property="og:description" content="اكتشف تطبيقات SariToolset وأدواتها للهواتف الذكية.">
 <meta property="og:url" content="https://saritoolset.github.io/">
 
 <meta name="google-adsense-account" content="ca-pub-1792078294671294">
@@ -22,12 +22,12 @@
 
 <script type="application/ld+json">
 {
-  "@context":"https://schema.org",
-  "@type":"WebSite",
-  "name":"SariToolset",
-  "url":"https://saritoolset.github.io/",
-  "description":"مجموعة تطبيقات وأدوات أندرويد للخصوصية والبرمجة والترجمة والتصوير الفلكي.",
-  "inLanguage":["ar","en","fr","tr"]
+ "@context":"https://schema.org",
+ "@type":"WebSite",
+ "name":"SariToolset",
+ "url":"https://saritoolset.github.io/",
+ "description":"مجموعة تطبيقات وأدوات أندرويد للخصوصية والبرمجة والترجمة والتصوير الفلكي.",
+ "inLanguage":["ar","en","fr","tr"]
 }
 </script>
 
@@ -38,7 +38,7 @@
 <style>
 :root{
  --bg:#f5f5f7;
- --surface:#ffffff;
+ --surface:#fff;
  --text:#1d1d1f;
  --muted:#6e6e73;
  --line:#e5e5ea;
@@ -47,7 +47,7 @@
  --soft:#f0f0f3;
  --shadow:0 1px 2px rgba(0,0,0,.04),0 8px 24px rgba(0,0,0,.06);
 }
-@media (prefers-color-scheme:dark){
+@media(prefers-color-scheme:dark){
  :root{
   --bg:#000;
   --surface:#1c1c1e;
@@ -63,11 +63,9 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
- margin:0;min-height:100vh;
- background:var(--bg);color:var(--text);
- font-family:"Cairo","SF Pro Text","Segoe UI",Tahoma,Arial,sans-serif;
- font-size:16px;line-height:1.6;
- -webkit-font-smoothing:antialiased;
+ margin:0;min-height:100vh;background:var(--bg);color:var(--text);
+ font-family:"Cairo","Segoe UI",Tahoma,Arial,sans-serif;
+ font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;
 }
 button,select{font:inherit;color:inherit}
 button{cursor:pointer;border:0;background:none;padding:0}
@@ -86,20 +84,41 @@ header{
 }
 .bar{position:relative;height:56px;display:flex;align-items:center;justify-content:center}
 .brand{font-size:19px;font-weight:800;letter-spacing:-.02em}
-.lang{position:absolute;inset-inline-end:0;top:50%;transform:translateY(-50%)}
-.lang select{
- appearance:none;-webkit-appearance:none;
- border:0;border-radius:10px;background:var(--soft);
- padding:7px 14px;font-size:13px;font-weight:600;cursor:pointer;outline:none;
+.header-controls{
+ position:absolute;inset-inline-end:0;top:50%;
+ transform:translateY(-50%);
+ display:flex;align-items:center;gap:8px;
 }
+.sbtn,.language-button{
+ width:36px;height:36px;flex:none;border-radius:10px;
+ display:grid;place-items:center;background:var(--soft);color:var(--muted);
+}
+.sbtn:hover,.language-button:hover{color:var(--text)}
+.sbtn svg{width:17px;height:17px}
+.language-wrap{position:relative;width:36px;height:36px}
+.language-button svg{width:21px;height:21px}
+.language-select{
+ position:absolute;inset:0;width:100%;height:100%;
+ opacity:0;cursor:pointer;
+}
+.language-select option{color:#111;background:#fff}
+
+/* SEARCH */
+.searchbar{padding:0 0 12px}
+.searchbar input{
+ width:100%;height:38px;border:0;border-radius:12px;outline:none;
+ background:var(--surface);box-shadow:var(--shadow);
+ padding:0 16px;font:inherit;font-size:15px;color:var(--text);
+}
+.none{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
 
 /* HERO */
 .hero{text-align:center;padding:56px 0 36px}
 .hero h1{margin:0 0 8px;font-size:clamp(32px,5vw,44px);font-weight:800;letter-spacing:-.03em}
 .hero p{margin:0;color:var(--muted);font-size:17px}
 
-/* APP LIST */
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-bottom:40px}
+/* APPS */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-bottom:35px}
 .card{
  background:var(--surface);border-radius:24px;box-shadow:var(--shadow);
  padding:22px;display:flex;flex-direction:column;gap:20px;
@@ -108,7 +127,6 @@ header{
 .card-main:hover .name{color:var(--accent)}
 .card-main h2{margin:0;font-size:19px;font-weight:700}
 .card-main p{margin:2px 0 0;color:var(--muted);font-size:14.5px}
-.actions{display:flex;gap:10px;flex-wrap:wrap}
 
 /* ICONS */
 .icon{width:68px;height:68px;border-radius:17px;flex:none;object-fit:cover;box-shadow:0 2px 10px rgba(0,0,0,.12)}
@@ -121,6 +139,7 @@ header{
 .icon.lg{width:112px;height:112px;border-radius:26px}
 
 /* BUTTONS */
+.actions{display:flex;gap:10px;flex-wrap:wrap}
 .btn{
  display:inline-flex;align-items:center;justify-content:center;gap:8px;
  height:42px;padding:0 20px;border-radius:999px;
@@ -137,7 +156,7 @@ header{
 .btn.big{height:52px;padding:0 28px;font-size:17px}
 .btn.big svg{width:22px;height:22px}
 
-/* DETAIL */
+/* DETAILS */
 .back{display:inline-flex;align-items:center;gap:6px;margin:32px 0 20px;color:var(--accent);font-size:15px;font-weight:600}
 .back svg{width:16px;height:16px}
 [dir="rtl"] .back svg{transform:scaleX(-1)}
@@ -146,57 +165,54 @@ header{
  padding:40px;display:flex;align-items:center;gap:32px;flex-wrap:wrap;
 }
 .detail-info{flex:1;min-width:240px}
-.detail-info h1{margin:0 0 4px;font-size:34px;font-weight:800;letter-spacing:-.02em}
+.detail-info h1{margin:0 0 4px;font-size:34px;font-weight:800}
 .detail-info .tag{margin:0 0 22px;color:var(--muted);font-size:17px}
 .about{
- margin:20px 0 40px;background:var(--surface);border-radius:28px;box-shadow:var(--shadow);
- padding:32px 40px;
+ margin:20px 0 40px;background:var(--surface);border-radius:28px;
+ box-shadow:var(--shadow);padding:32px 40px;
 }
-.about h2{margin:0 0 10px;font-size:18px;font-weight:700}
-.about p{margin:0;color:var(--muted);line-height:1.9}
+.about h2{margin:22px 0 8px;font-size:20px}
+.about h2:first-child{margin-top:0}
+.about h3{font-size:17px;margin:18px 0 6px}
+.about p,.about li{color:var(--muted);line-height:1.95}
+.about ul{padding-inline-start:22px}
+.about a{color:var(--accent);text-decoration:underline}
 
-/* CONTENT */
-.page{max-width:760px;margin:0 auto;padding:20px 0 50px}
-.page h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:0 0 8px}
-.page h2{font-size:21px;font-weight:700;margin:28px 0 8px}
-.page h3{font-size:17px;margin:20px 0 6px}
-.page p,.page li{color:var(--muted);line-height:1.95}
-.page ul{padding-inline-start:22px}
-.page a:not(.post-link){color:var(--accent);text-decoration:underline}
-.page code{direction:ltr;unicode-bidi:embed}
-.page .card{padding:30px;margin-top:18px}
-.post-link{display:block;padding:18px 0;border-bottom:1px solid var(--line);color:var(--text);font-weight:700;font-size:17px}
-.post-link span{display:block;color:var(--muted);font-weight:500;font-size:14px}
+/* HOME CONTENT */
+.page{max-width:760px;margin:0 auto;padding:20px 0 45px}
+.page h2{font-size:21px;margin:26px 0 8px}
+.page p{color:var(--muted);line-height:1.95}
+.page a{color:var(--accent);text-decoration:underline}
+.blog-preview{
+ background:var(--surface);border-radius:24px;padding:24px;
+ box-shadow:var(--shadow);margin:20px 0 45px;
+}
+.blog-preview h2{margin-top:0}
+.blog-preview a{
+ display:block;padding:13px 0;border-bottom:1px solid var(--line);
+ color:var(--text);font-weight:700;text-decoration:none;
+}
+.blog-preview a:last-child{border-bottom:0}
+.blog-preview a span{display:block;color:var(--muted);font-size:13px;font-weight:400}
 
 /* FOOTER */
-footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+footer{
+ padding:28px 0;text-align:center;color:var(--muted);
+ font-size:13px;border-top:1px solid var(--line);
+}
 footer a:hover{color:var(--accent)}
 
 /* TOAST */
 .toast{
- position:fixed;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);
- background:#1d1d1f;color:#fff;padding:10px 20px;border-radius:999px;font-size:14px;
- opacity:0;pointer-events:none;transition:opacity .25s,transform .25s;
+ position:fixed;bottom:24px;left:50%;
+ transform:translateX(-50%) translateY(20px);
+ background:#1d1d1f;color:#fff;padding:10px 20px;
+ border-radius:999px;font-size:14px;opacity:0;
+ pointer-events:none;transition:opacity .25s,transform .25s;
+ z-index:20;
 }
 .toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
 
-/* SEARCH */
-.sbtn{
- position:absolute;inset-inline-start:0;top:50%;transform:translateY(-50%);
- width:34px;height:34px;border-radius:10px;display:grid;place-items:center;
- color:var(--muted);background:var(--soft);
-}
-.sbtn:hover{color:var(--text)}
-.sbtn svg{width:16px;height:16px}
-.searchbar{padding:0 0 12px}
-.searchbar input{
- width:100%;height:38px;border:0;border-radius:12px;outline:none;
- background:var(--surface);box-shadow:var(--shadow);
- padding:0 16px;font:inherit;font-size:15px;color:var(--text);
-}
-.none{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
-
-/* MOBILE */
 @media(max-width:680px){
  .wrap{width:calc(100% - 28px)}
  .grid{grid-template-columns:1fr;gap:14px}
@@ -215,17 +231,38 @@ footer a:hover{color:var(--accent)}
 </head>
 
 <body>
+
 <header>
  <div class="wrap bar">
-  <button class="sbtn" id="sbtn" type="button" aria-label="Search">
-   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
-    <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
-   </svg>
-  </button>
   <a class="brand" href="#">SariToolset</a>
-  <div class="lang"><select id="lang" aria-label="Language"></select></div>
+
+  <div class="header-controls">
+
+   <div class="language-wrap">
+    <button class="language-button" type="button" aria-label="Translate" title="Translate">
+     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M3 5h12M9 3v2m3 0c-.6 4-3.5 7.5-7 9"/>
+      <path d="M5 9c1.5 2.5 4 4.5 7 5.5M14 20l4-10 4 10m-6.5-3h5"/>
+     </svg>
+    </button>
+    <select id="lang" class="language-select" aria-label="Choose language">
+     <option value="ar">العربية</option>
+     <option value="en">English</option>
+     <option value="fr">Français</option>
+     <option value="tr">Türkçe</option>
+    </select>
+   </div>
+
+   <button class="sbtn" id="sbtn" type="button" aria-label="Search">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+     <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+    </svg>
+   </button>
+
+  </div>
  </div>
- <div class="searchbar" id="searchbar" hidden>
+
+ <div class="searchbar wrap" id="searchbar" hidden>
   <input id="q" type="search" autocomplete="off" placeholder="بحث...">
  </div>
 </header>
@@ -233,73 +270,103 @@ footer a:hover{color:var(--accent)}
 <main class="wrap">
 
 <section id="list">
+
  <div class="hero">
   <h1 data-k="heroTitle">تطبيقات SariToolset</h1>
   <p data-k="heroSub">مجموعة تطبيقات أندرويد وأدوات رقمية عملية.</p>
  </div>
 
  <div class="grid" id="grid">
+
   <article class="card">
    <a class="card-main" href="#vpn">
     <div class="ph" style="--c1:#0a84ff;--c2:#5e5ce6">S</div>
-    <div><h2>Sari VPN</h2><p>اتصال VPN وأدوات الخصوصية وإدارة إعدادات الاتصال.</p></div>
+    <div><h2>Sari VPN</h2><p>خصوصية الاتصال وحماية البيانات عبر الشبكات العامة.</p></div>
    </a>
   </article>
+
   <article class="card">
    <a class="card-main" href="#dub">
     <div class="ph" style="--c1:#ff9f0a;--c2:#ff375f">D</div>
-    <div><h2>SARI DUB</h2><p>ترجمة الفيديوهات والدبلجة وملفات الترجمة والصوت.</p></div>
+    <div><h2>SARI DUB</h2><p>ترجمة الفيديوهات والدبلجة والتعامل مع الصوت.</p></div>
    </a>
   </article>
+
   <article class="card">
    <a class="card-main" href="#ide">
     <div class="ph" style="--c1:#34c759;--c2:#0fa3b1">I</div>
-    <div><h2>SARI IDE</h2><p>بيئة تطوير للهواتف لكتابة الأكواد وإدارة المشاريع.</p></div>
+    <div><h2>SARI IDE</h2><p>بيئة تطوير للهواتف وتنظيم المشاريع البرمجية.</p></div>
    </a>
   </article>
+
   <article class="card">
    <a class="card-main" href="#astro">
     <div class="ph" style="--c1:#5e5ce6;--c2:#1c1a4d">A</div>
     <div><h2>SARI Astro</h2><p>التصوير الفلكي ومحاذاة الصور وتكديسها.</p></div>
    </a>
   </article>
+
  </div>
 
- <section class="page" aria-label="معلومات عن SariToolset">
-  <h2>ما هو SariToolset؟</h2>
-  <p>SariToolset هو مشروع تقني يضم مجموعة تطبيقات أندرويد وأدوات رقمية. تهدف المجموعة إلى تقديم حلول عملية لمستخدمي الهواتف في مجالات الاتصال والخصوصية، والترجمة والدبلجة، وتطوير البرمجيات، والتصوير الفلكي ومعالجة الصور.</p>
+ <section class="page">
+  <h2>مجموعة تطبيقات SariToolset</h2>
 
-  <h2>تطبيقات مجموعة SariToolset</h2>
+  <p>
+   SariToolset مجموعة من تطبيقات أندرويد والمشاريع التقنية التي تهدف إلى تقديم أدوات عملية في مجالات الخصوصية والاتصال، والترجمة والدبلجة، وتطوير البرمجيات، والتصوير الفلكي.
+   نعمل على تطوير تطبيقات سهلة الاستخدام مع الاهتمام بتجربة الهاتف والأداء.
+  </p>
 
-  <h3>Sari VPN – الاتصال والخصوصية</h3>
-  <p>Sari VPN تطبيق لإدارة اتصالات VPN وإعدادات الاتصال. يوفر واجهة للوصول إلى خيارات الاتصال والخوادم المتاحة وفق إمكانيات الإصدار المستخدم.</p>
+  <h2>الخصوصية والاتصال</h2>
+  <p>
+   توفر أدوات VPN وسيلة لإنشاء اتصال مشفّر بين الجهاز وخادم VPN عند استخدام خدمة موثوقة. ويمكن أن يساعد ذلك في حماية البيانات أثناء الاتصال بشبكات Wi-Fi العامة، مع ضرورة فهم حدود الحماية ومراجعة سياسة الخصوصية الخاصة بمزود الخدمة.
+  </p>
 
-  <h3>SARI DUB – ترجمة ودبلجة الفيديو</h3>
-  <p>SARI DUB مشروع لتسهيل ترجمة الفيديوهات ودبلجتها إلى لغات مختلفة، مع أدوات للتعامل مع ملفات الترجمة والصوت. ستُنشر معلومات الإصدار والتوفر عند إتاحة التطبيق.</p>
+  <h2>الترجمة والدبلجة</h2>
+  <p>
+   تهدف أدوات الترجمة والدبلجة إلى مساعدة المستخدم على تحويل المحتوى المرئي إلى لغات مختلفة، وتنظيم ملفات الترجمة والصوت ضمن سير عمل واضح.
+  </p>
 
-  <h3>SARI IDE – البرمجة عبر الهاتف</h3>
-  <p>SARI IDE بيئة تطوير مخصصة للهواتف الذكية، وتهدف إلى مساعدة المطورين على كتابة الأكواد وتنظيم ملفات المصدر وإدارة المشاريع البرمجية باستخدام الهاتف.</p>
+  <h2>البرمجة باستخدام الهاتف</h2>
+  <p>
+   تطوير البرمجيات عبر الهاتف يحتاج إلى تنظيم الملفات والمشاريع، وإدارة الأكواد والنسخ المختلفة، واستخدام أدوات مناسبة لحجم شاشة الهاتف وإمكاناته.
+  </p>
 
-  <h3>SARI Astro – التصوير الفلكي</h3>
-  <p>SARI Astro تطبيق للتصوير الفلكي ومعالجة صور السماء. يستخدم تقنيات محاذاة الصور وتكديس الإطارات للمساعدة في إبراز النجوم والتفاصيل الفلكية.</p>
+  <h2>التصوير الفلكي</h2>
+  <p>
+   يمكن تحسين صور السماء الليلية بالتقاط عدة إطارات ومحاذاتها ثم تكديسها. تساعد هذه العملية على تقليل الضوضاء العشوائية وإظهار تفاصيل النجوم بصورة أوضح.
+  </p>
 
-  <h2>تحميل التطبيقات والتحديثات</h2>
-  <p>استعرض بطاقات التطبيقات لمعرفة وصف كل تطبيق وحالة توفره. تظهر روابط التحميل عندما يكون الإصدار منشوراً، بينما تظهر التطبيقات التي لم تصدر بعد بحالة «قريباً». تحقق دائماً من متطلبات التطبيق ومصدر ملف التثبيت قبل تثبيته.</p>
+  <div class="blog-preview">
+   <h2>المقالات والشروحات</h2>
+   <p>اقرأ الأدلة العملية والشروحات التقنية من SariToolset.</p>
 
-  <h2>الأسئلة الشائعة</h2>
+   <a href="blog/apk-safety.html">
+    كيف تثبّت ملفات APK بأمان على أندرويد
+    <span>التحقق من الملفات والصلاحيات ومصادر التحميل.</span>
+   </a>
 
-  <h3>هل جميع تطبيقات SariToolset متاحة للتحميل؟</h3>
-  <p>لا. يعتمد التوفر على حالة إصدار كل تطبيق. تعرض صفحة المجموعة حالة التطبيقات وروابط الإصدارات المنشورة فقط.</p>
+   <a href="blog/what-is-vpn.html">
+    ما هو VPN؟ ومتى تحتاجه فعلاً؟
+    <span>فهم التشفير والخصوصية وحدود حماية VPN.</span>
+   </a>
 
-  <h3>هل التطبيقات مخصصة لأجهزة أندرويد؟</h3>
-  <p>المجموعة موجهة إلى أجهزة أندرويد، وقد تختلف إصدارات أندرويد ومتطلبات التشغيل من تطبيق إلى آخر.</p>
+   <a href="blog/astro-stacking.html">
+    مقدمة إلى تكديس الصور الفلكية
+    <span>كيف تعمل المحاذاة والتكديس لتحسين صور النجوم.</span>
+   </a>
 
-  <h3>كيف أتواصل مع فريق SariToolset؟</h3>
-  <p>يمكنك استخدام صفحة <a href="contact.html">اتصل بنا</a> لإرسال الاستفسارات المتعلقة بالموقع والتطبيقات.</p>
+   <a href="blog/index.html">عرض جميع المقالات ←</a>
+  </div>
 
-  <h2>معلومات وسياسات الموقع</h2>
-  <p>لمعرفة المزيد عن المشروع، اقرأ <a href="about.html">من نحن</a>، وراجع <a href="privacy.html">سياسة الخصوصية</a> و<a href="terms.html">شروط الاستخدام</a>. كما يمكنك زيارة <a href="blog/index.html">المقالات والشروحات</a>.</p>
+  <h2>معلومات الموقع</h2>
+  <p>
+   تعرف على <a href="about.html">SariToolset</a>، واقرأ
+   <a href="privacy.html">سياسة الخصوصية</a> و
+   <a href="terms.html">شروط الاستخدام</a>، أو تواصل معنا عبر
+   <a href="contact.html">صفحة الاتصال</a>.
+  </p>
  </section>
+
 </section>
 
 <section id="detail" hidden>
@@ -309,14 +376,16 @@ footer a:hover{color:var(--accent)}
   </svg>
   <span data-k="back">رجوع</span>
  </a>
+
  <div class="detail" id="detailCard"></div>
- <div class="about"><p id="detailDesc"></p></div>
+ <div class="about" id="detailContent"></div>
 </section>
 
 </main>
 
 <footer>
- © <span id="year"></span> SariToolset · <span data-k="rights">جميع الحقوق محفوظة</span><br>
+ © <span id="year"></span> SariToolset ·
+ <span data-k="rights">جميع الحقوق محفوظة</span><br>
  <a href="about.html">من نحن</a> ·
  <a href="blog/index.html">المقالات</a> ·
  <a href="privacy.html">سياسة الخصوصية</a> ·
@@ -335,58 +404,299 @@ const LANGS={
 };
 
 const UI={
- ar:{heroTitle:"تطبيقات SariToolset",heroSub:"مجموعة تطبيقات أندرويد وأدوات رقمية عملية من SariToolset.",download:"تحميل",share:"مشاركة",soon:"قريباً",back:"رجوع",copied:"تم نسخ رابط التطبيق",rights:"جميع الحقوق محفوظة",unavailable:"الملف غير متوفر حالياً، حاول لاحقاً",none:"لا توجد نتائج"},
- en:{heroTitle:"SariToolset Apps",heroSub:"Android apps and practical digital tools from SariToolset.",download:"Download",share:"Share",soon:"Coming soon",back:"Back",copied:"App link copied",rights:"All rights reserved",unavailable:"File not available yet, please try later",none:"No results"},
- fr:{heroTitle:"Applications SariToolset",heroSub:"Applications Android et outils numériques pratiques.",download:"Télécharger",share:"Partager",soon:"Bientôt",back:"Retour",copied:"Lien copié",rights:"Tous droits réservés",unavailable:"Fichier indisponible pour le moment",none:"Aucun résultat"},
- tr:{heroTitle:"SariToolset Uygulamaları",heroSub:"Android uygulamaları ve pratik dijital araçlar.",download:"İndir",share:"Paylaş",soon:"Yakında",back:"Geri",copied:"Bağlantı kopyalandı",rights:"Tüm hakları saklıdır",unavailable:"Dosya şu an kullanılamıyor",none:"Sonuç bulunamadı"}
+ ar:{
+  heroTitle:"تطبيقات SariToolset",
+  heroSub:"مجموعة تطبيقات أندرويد وأدوات رقمية عملية.",
+  download:"تحميل",share:"مشاركة",soon:"قريباً",
+  back:"رجوع",copied:"تم نسخ رابط التطبيق",
+  rights:"جميع الحقوق محفوظة",
+  unavailable:"الملف غير متوفر حالياً",
+  none:"لا توجد نتائج"
+ },
+ en:{
+  heroTitle:"SariToolset Apps",
+  heroSub:"Android apps and practical digital tools.",
+  download:"Download",share:"Share",soon:"Coming soon",
+  back:"Back",copied:"App link copied",
+  rights:"All rights reserved",
+  unavailable:"File not available yet",
+  none:"No results"
+ },
+ fr:{
+  heroTitle:"Applications SariToolset",
+  heroSub:"Applications Android et outils numériques pratiques.",
+  download:"Télécharger",share:"Partager",soon:"Bientôt",
+  back:"Retour",copied:"Lien copié",
+  rights:"Tous droits réservés",
+  unavailable:"Fichier indisponible",
+  none:"Aucun résultat"
+ },
+ tr:{
+  heroTitle:"SariToolset Uygulamaları",
+  heroSub:"Android uygulamaları ve pratik dijital araçlar.",
+  download:"İndir",share:"Paylaş",soon:"Yakında",
+  back:"Geri",copied:"Bağlantı kopyalandı",
+  rights:"Tüm hakları saklıdır",
+  unavailable:"Dosya henüz mevcut değil",
+  none:"Sonuç bulunamadı"
+ }
 };
 
 const APPS=[
  {
-  id:"vpn",name:"Sari VPN",icon:"sari-vpn-icon-512.png",letter:"S",
-  c:["#0a84ff","#5e5ce6"],file:"downloads/sari-vpn.apk",
+  id:"vpn",
+  name:"Sari VPN",
+  icon:"sari-vpn-icon-512.png",
+  letter:"S",
+  c:["#0a84ff","#5e5ce6"],
+  file:"downloads/sari-vpn.apk",
   alt:"https://drive.google.com/uc?export=download&id=1REdf44l_SuUdrhzvTJJ1b7ax3i3wCu1B",
   txt:{
-   ar:["اتصال VPN وأدوات الخصوصية","تطبيق Sari VPN من مجموعة SariToolset، يوفر واجهة لإدارة اتصال VPN والوصول إلى إعدادات الاتصال والخوادم المتاحة داخل التطبيق."],
-   en:["VPN connection and privacy tools","Sari VPN from SariToolset offers an interface to manage VPN connections and access available connection settings and servers."],
-   fr:["Connexion VPN et outils de confidentialité","Sari VPN offre une interface pour gérer les connexions VPN et accéder aux paramètres disponibles."],
-   tr:["VPN bağlantısı ve gizlilik araçları","Sari VPN, VPN bağlantınızı yönetmek ve mevcut bağlantı ayarlarına erişmek için bir arayüz sunar."]
+   ar:[
+    "خصوصية الاتصال وحماية البيانات",
+    "Sari VPN من مجموعة SariToolset لإدارة اتصال VPN وإعداداته. عند استخدام خدمة VPN موثوقة، يمكن للاتصال المشفر المساعدة في حماية البيانات أثناء انتقالها عبر شبكات Wi-Fi العامة."
+   ],
+   en:[
+    "Connection privacy and data protection",
+    "Sari VPN from SariToolset provides an interface for managing VPN connections and settings. A trusted VPN service can help protect data in transit when using public Wi-Fi."
+   ],
+   fr:[
+    "Confidentialité de connexion et protection des données",
+    "Sari VPN permet de gérer les connexions et paramètres VPN. Un service VPN fiable peut contribuer à protéger les données lors de l'utilisation d'un Wi-Fi public."
+   ],
+   tr:[
+    "Bağlantı gizliliği ve veri koruması",
+    "Sari VPN, VPN bağlantılarını ve ayarlarını yönetmek için bir arayüz sunar. Güvenilir bir VPN hizmeti, halka açık Wi-Fi kullanırken verilerin korunmasına yardımcı olabilir."
+   ]
+  },
+  guide:{
+   ar:{
+    title:"كيف تستخدم VPN لحماية اتصالك؟",
+    steps:[
+     "استخدم شبكة Wi-Fi موثوقة قدر الإمكان، وتجنب إدخال بيانات حساسة على الشبكات المشبوهة.",
+     "تحقق من هوية مزود VPN وسياسة الخصوصية وسياسة التعامل مع سجلات الاتصال.",
+     "اتصل بالخدمة من داخل التطبيق وتأكد من ظهور حالة الاتصال قبل استخدام الشبكة.",
+     "تذكر أن VPN لا يمنع التصيد الاحتيالي ولا يحمي الجهاز من التطبيقات الضارة."
+    ],
+    note:"ملاحظة: تشفير الاتصال يعتمد على الخدمة والخادم والبروتوكول المستخدم. لا يعني استخدام VPN إخفاء الهوية بالكامل أو ضمان أمان كل نشاط على الإنترنت."
+   },
+   en:{
+    title:"Using VPN more safely",
+    steps:[
+     "Prefer trusted Wi-Fi networks and avoid entering sensitive information on suspicious networks.",
+     "Review the VPN provider, privacy policy and connection logging practices.",
+     "Connect through the app and confirm the connection status.",
+     "Remember that VPN does not prevent phishing or protect against malicious apps."
+    ],
+    note:"VPN protection depends on the provider, server and protocol. It does not guarantee complete anonymity."
+   },
+   fr:{
+    title:"Utiliser un VPN de manière plus sûre",
+    steps:[
+     "Privilégiez les réseaux Wi-Fi fiables.",
+     "Consultez le fournisseur VPN et sa politique de confidentialité.",
+     "Vérifiez l'état de la connexion dans l'application.",
+     "Un VPN ne bloque pas le phishing ni les applications malveillantes."
+    ],
+    note:"La protection dépend du fournisseur et du protocole. Un VPN ne garantit pas l'anonymat complet."
+   },
+   tr:{
+    title:"VPN'i daha güvenli kullanma",
+    steps:[
+     "Mümkün olduğunca güvenilir Wi-Fi ağlarını tercih edin.",
+     "VPN sağlayıcısının gizlilik politikasını inceleyin.",
+     "Uygulamada bağlantı durumunu kontrol edin.",
+     "VPN kimlik avını veya zararlı uygulamaları engellemez."
+    ],
+    note:"Koruma sağlayıcıya ve protokole bağlıdır. VPN tam anonimlik sağlamaz."
+   }
   }
  },
  {
-  id:"dub",name:"SARI DUB",icon:null,letter:"D",
-  c:["#ff9f0a","#ff375f"],file:null,
+  id:"dub",
+  name:"SARI DUB",
+  icon:null,
+  letter:"D",
+  c:["#ff9f0a","#ff375f"],
+  file:null,
   txt:{
-   ar:["ترجمة ودبلجة الفيديوهات","تطبيق لترجمة ودبلجة الفيديوهات، مع أدوات لملفات الترجمة والصوت."],
-   en:["Translate and dub your videos","An app for translating and dubbing videos with subtitle and audio tools."],
-   fr:["Traduire et doubler vos vidéos","Une application pour traduire et doubler des vidéos avec des outils audio et sous-titres."],
-   tr:["Videoları çevirin ve seslendirin","Altyazı ve ses araçlarıyla videoları çevirmek ve seslendirmek için bir uygulama."]
+   ar:["ترجمة ودبلجة الفيديوهات","مشروع من SariToolset يهدف إلى تسهيل ترجمة الفيديوهات ودبلجتها والتعامل مع ملفات النصوص والصوت."],
+   en:["Video translation and dubbing","A SariToolset project designed to help translate and dub videos and work with subtitle and audio files."],
+   fr:["Traduction et doublage vidéo","Un projet SariToolset consacré à la traduction des vidéos, au doublage et aux fichiers audio et sous-titres."],
+   tr:["Video çevirisi ve seslendirme","Videoları çevirmek, seslendirmek ve altyazı ile ses dosyalarıyla çalışmak için bir SariToolset projesi."]
+  },
+  guide:{
+   ar:{
+    title:"كيف تتم ترجمة الفيديو ودبلجته؟",
+    steps:[
+     "ابدأ بتحديد لغة الفيديو الأصلية واللغة التي تريد ترجمة المحتوى إليها.",
+     "استخرج النص المنطوق أو أنشئ تفريغاً نصياً للحوار.",
+     "راجع النص وصحح أسماء الأشخاص والمصطلحات قبل الترجمة.",
+     "قسّم الترجمة إلى مقاطع زمنية قصيرة متوافقة مع الحوار.",
+     "سجّل الصوت المترجم أو أنشئ المسار الصوتي، ثم راجع تزامنه مع الصورة."
+    ],
+    note:"الترجمة الجيدة لا تعتمد على التحويل الحرفي فقط؛ راجع السياق والمعنى والتوقيت قبل نشر الفيديو."
+   },
+   en:{
+    title:"How video translation and dubbing work",
+    steps:[
+     "Identify the original language and target language.",
+     "Transcribe the spoken dialogue.",
+     "Review names and technical terms before translation.",
+     "Split subtitles into timed segments.",
+     "Record or generate the translated audio and check synchronization."
+    ],
+    note:"Good translation preserves meaning and context, not only literal wording."
+   },
+   fr:{
+    title:"Comment fonctionnent la traduction et le doublage vidéo ?",
+    steps:[
+     "Identifiez la langue originale et la langue cible.",
+     "Transcrivez les dialogues.",
+     "Vérifiez les noms et les termes techniques.",
+     "Découpez les sous-titres selon le minutage.",
+     "Vérifiez la synchronisation de la piste audio."
+    ],
+    note:"Une bonne traduction respecte le sens et le contexte."
+   },
+   tr:{
+    title:"Video çevirisi ve dublaj nasıl yapılır?",
+    steps:[
+     "Kaynak ve hedef dili belirleyin.",
+     "Konuşmaları metne dönüştürün.",
+     "İsimleri ve teknik terimleri kontrol edin.",
+     "Altyazıları zaman kodlarına göre bölün.",
+     "Seslendirmeyi hazırlayıp senkronizasyonu kontrol edin."
+    ],
+    note:"İyi bir çeviri yalnızca kelimeleri değil, anlamı ve bağlamı da korur."
+   }
   }
  },
  {
-  id:"ide",name:"SARI IDE",icon:null,letter:"I",
-  c:["#34c759","#0fa3b1"],file:null,
+  id:"ide",
+  name:"SARI IDE",
+  icon:null,
+  letter:"I",
+  c:["#34c759","#0fa3b1"],
+  file:null,
   txt:{
-   ar:["بيئة تطوير وأدوات برمجية","بيئة تطوير مخصصة للهاتف من مجموعة SariToolset، لكتابة الأكواد وإدارة المشاريع البرمجية."],
-   en:["Development environment and coding tools","A mobile development environment for writing code and managing software projects."],
-   fr:["Environnement de développement","Un environnement mobile pour écrire du code et gérer des projets logiciels."],
-   tr:["Geliştirme ortamı ve kod araçları","Kod yazmak ve yazılım projelerini yönetmek için mobil geliştirme ortamı."]
+   ar:["بيئة تطوير وأدوات برمجية","مشروع بيئة تطوير للهاتف من SariToolset، يهدف إلى تسهيل كتابة الأكواد وتنظيم الملفات وإدارة المشاريع البرمجية."],
+   en:["Mobile development environment","A SariToolset project focused on writing code, organizing source files and managing software projects on mobile devices."],
+   fr:["Environnement de développement mobile","Un projet SariToolset pour écrire du code, organiser les fichiers et gérer des projets sur mobile."],
+   tr:["Mobil geliştirme ortamı","SariToolset'in mobil cihazlarda kod yazma ve projeleri düzenleme odaklı geliştirme projesi."]
+  },
+  guide:{
+   ar:{
+    title:"كيف تنظم مشروعاً برمجياً على الهاتف؟",
+    steps:[
+     "أنشئ مجلداً مستقلاً لكل مشروع، ولا تخلط ملفات المشاريع المختلفة.",
+     "استخدم أسماء واضحة للملفات والمجلدات مثل app وsrc وassets.",
+     "احتفظ بنسخة احتياطية من ملفات المصدر قبل إجراء تغييرات كبيرة.",
+     "استخدم Git لتتبع التعديلات والرجوع إلى إصدار سابق عند حدوث خطأ.",
+     "قسّم الكود إلى ملفات صغيرة حسب الوظيفة، واكتب ملاحظات مختصرة عند الحاجة."
+    ],
+    note:"التنظيم الجيد ونسخ المصدر الاحتياطية يساعدان على تقليل فقدان العمل عند تطوير التطبيقات عبر الهاتف."
+   },
+   en:{
+    title:"Organizing a coding project on your phone",
+    steps:[
+     "Create a separate folder for each project.",
+     "Use clear names for source, assets and resource folders.",
+     "Back up source files before major changes.",
+     "Use Git to track changes and restore earlier versions.",
+     "Split code into focused files and document important decisions."
+    ],
+    note:"Good organization and backups reduce the risk of losing work on mobile."
+   },
+   fr:{
+    title:"Organiser un projet de programmation sur téléphone",
+    steps:[
+     "Créez un dossier séparé pour chaque projet.",
+     "Utilisez des noms clairs pour les fichiers.",
+     "Sauvegardez le code avant les changements importants.",
+     "Utilisez Git pour suivre les modifications.",
+     "Séparez le code selon ses fonctions."
+    ],
+    note:"Une bonne organisation et des sauvegardes protègent votre travail."
+   },
+   tr:{
+    title:"Telefonda yazılım projesi düzenleme",
+    steps:[
+     "Her proje için ayrı klasör oluşturun.",
+     "Dosya ve klasörlere açık isimler verin.",
+     "Büyük değişikliklerden önce kaynak kodu yedekleyin.",
+     "Değişiklikleri izlemek için Git kullanın.",
+     "Kodu görevlerine göre küçük dosyalara ayırın."
+    ],
+    note:"Düzenli klasörler ve yedekler çalışmanızı korur."
+   }
   }
  },
  {
-  id:"astro",name:"SARI Astro",icon:"Sari%20astro_2.jpg",letter:"A",
-  c:["#5e5ce6","#1c1a4d"],file:"downloads/sari-astro.apk",
+  id:"astro",
+  name:"SARI Astro",
+  icon:"Sari%20astro_2.jpg",
+  letter:"A",
+  c:["#5e5ce6","#1c1a4d"],
+  file:"downloads/sari-astro.apk",
   alt:"https://drive.google.com/uc?export=download&id=1hGxBrTKxnPPfu4ROkq5B-Fcq2ILM4CgG",
   txt:{
-   ar:["التصوير الفلكي ومعالجة الصور","SARI Astro تطبيق للتصوير الفلكي ومعالجة صور السماء. يستخدم محاذاة الصور وتكديس الإطارات لإبراز النجوم والتفاصيل الفلكية."],
-   en:["Astrophotography and image processing","SARI Astro processes sky images using alignment and stacking to reveal stars and astronomical details."],
-   fr:["Astrophotographie et traitement d’images","SARI Astro traite les images du ciel grâce à l'alignement et à l'empilement."],
-   tr:["Astrofotoğrafçılık ve görüntü işleme","SARI Astro, hizalama ve yığınlama ile gökyüzü görüntülerini işler."]
+   ar:["التصوير الفلكي ومعالجة الصور","SARI Astro تطبيق للتصوير الفلكي ومعالجة صور السماء. يستخدم محاذاة الصور وتكديس الإطارات للمساعدة في إظهار النجوم والتفاصيل الفلكية."],
+   en:["Astrophotography and image processing","SARI Astro is an astrophotography app using image alignment and stacking to help reveal stars and astronomical details."],
+   fr:["Astrophotographie et traitement d’images","SARI Astro utilise l'alignement et l'empilement d'images pour révéler les étoiles et les détails du ciel."],
+   tr:["Astrofotoğrafçılık ve görüntü işleme","SARI Astro, yıldızları ve gökyüzü ayrıntılarını ortaya çıkarmak için görüntü hizalama ve istifleme kullanır."]
+  },
+  guide:{
+   ar:{
+    title:"كيف تعمل تقنية تكديس الصور الفلكية؟",
+    steps:[
+     "التقط عدة صور للسماء مع تثبيت الهاتف قدر الإمكان.",
+     "احتفظ بالإطارات التي تحتوي على نجوم واضحة وتجنب الصور المهتزة بشدة.",
+     "تتعرف مرحلة المحاذاة على مواقع النجوم وتصحح اختلاف مواقعها بين الإطارات.",
+     "بعد المحاذاة، يدمج المعالج الصور لتقليل الضوضاء العشوائية وتحسين وضوح الإشارة.",
+     "راجع النتيجة النهائية واضبط السطوع والتباين والألوان بحذر للحفاظ على مظهر طبيعي."
+    ],
+    note:"التكديس لا يصنع تفاصيل غير موجودة في الصور الأصلية. جودة النتيجة تعتمد على التركيز والثبات وجودة الإطارات والمحاذاة."
+   },
+   en:{
+    title:"How astrophotography stacking works",
+    steps:[
+     "Capture several sky frames while keeping the phone steady.",
+     "Keep frames with clear stars and discard heavily blurred ones.",
+     "Alignment detects star positions and corrects differences between frames.",
+     "Stacking combines aligned frames to reduce random noise and improve signal clarity.",
+     "Review brightness, contrast and color without over-processing."
+    ],
+    note:"Stacking cannot create details absent from the original frames. Results depend on focus, stability and alignment."
+   },
+   fr:{
+    title:"Comment fonctionne l'empilement astrophotographique ?",
+    steps:[
+     "Prenez plusieurs images du ciel avec un téléphone stable.",
+     "Conservez les images où les étoiles sont nettes.",
+     "L'alignement corrige les différences de position des étoiles.",
+     "L'empilement réduit le bruit aléatoire.",
+     "Ajustez la luminosité, le contraste et les couleurs avec modération."
+    ],
+    note:"L'empilement ne crée pas de détails absents des images originales."
+   },
+   tr:{
+    title:"Astrofotoğrafçılıkta istifleme nasıl çalışır?",
+    steps:[
+     "Telefonu sabit tutarak birden fazla gökyüzü karesi çekin.",
+     "Yıldızların net olduğu kareleri seçin.",
+     "Hizalama, kareler arasındaki yıldız konumu farklarını düzeltir.",
+     "İstifleme, rastgele gürültüyü azaltmak için kareleri birleştirir.",
+     "Parlaklık, kontrast ve renkleri dikkatli ayarlayın."
+    ],
+    note:"İstifleme, orijinal görüntülerde bulunmayan ayrıntıları oluşturamaz."
+   }
   }
  }
 ];
 
 const ICON_DL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5v12"/><path d="M6.5 10.5L12 16l5.5-5.5"/><path d="M4 20.5h16"/></svg>';
+
 const ICON_SHARE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5"/><path d="M7.5 8L12 3.5 16.5 8"/><path d="M8 12.5H6.5a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-4.5a2 2 0 0 0-2-2H16"/></svg>';
 
 const $=id=>document.getElementById(id);
@@ -398,7 +708,10 @@ function detectLang(){
   const saved=localStorage.getItem("sari-lang");
   if(saved&&UI[saved])return saved;
  }catch(e){}
- const list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||"ar"];
+
+ const list=navigator.languages&&navigator.languages.length
+  ?navigator.languages:[navigator.language||"ar"];
+
  for(const l of list){
   const code=String(l).slice(0,2).toLowerCase();
   if(UI[code])return code;
@@ -454,29 +767,33 @@ function makeActions(app,big){
  sh.innerHTML=ICON_SHARE+"<span>"+t("share")+"</span>";
  sh.addEventListener("click",()=>shareApp(app));
  wrap.appendChild(sh);
+
  return wrap;
 }
 
 async function startDownload(app,e){
  e.preventDefault();
  let missing=false;
+
  try{
   const r=await fetch(app.file,{method:"HEAD",cache:"no-store"});
   missing=!r.ok;
  }catch(err){
   missing=false;
  }
+
  if(missing){
   if(app.alt)window.open(app.alt,"_blank","noopener");
   else toast(t("unavailable"));
   return;
  }
- const l=document.createElement("a");
- l.href=app.file;
- l.setAttribute("download","");
- document.body.appendChild(l);
- l.click();
- l.remove();
+
+ const link=document.createElement("a");
+ link.href=app.file;
+ link.setAttribute("download","");
+ document.body.appendChild(link);
+ link.click();
+ link.remove();
 }
 
 function appUrl(app){
@@ -485,14 +802,20 @@ function appUrl(app){
 
 async function shareApp(app){
  const url=appUrl(app);
+
  if(navigator.share){
   try{
-   await navigator.share({title:app.name,text:app.name+" — SariToolset",url});
+   await navigator.share({
+    title:app.name,
+    text:app.name+" — SariToolset",
+    url
+   });
    return;
   }catch(e){
    if(e&&e.name==="AbortError")return;
   }
  }
+
  try{
   await navigator.clipboard.writeText(url);
   toast(t("copied"));
@@ -502,6 +825,7 @@ async function shareApp(app){
 }
 
 let toastTimer;
+
 function toast(msg){
  const el=$("toast");
  el.textContent=msg;
@@ -513,9 +837,12 @@ function toast(msg){
 function renderList(){
  const grid=$("grid");
  grid.replaceChildren();
+
  const q=($("q").value||"").trim().toLowerCase();
 
- APPS.filter(app=>(app.name+" "+app.txt[lang][0]).toLowerCase().includes(q)).forEach(app=>{
+ APPS.filter(app=>{
+  return (app.name+" "+app.txt[lang][0]).toLowerCase().includes(q);
+ }).forEach(app=>{
   const card=document.createElement("article");
   card.className="card";
 
@@ -525,11 +852,14 @@ function renderList(){
   main.appendChild(makeArt(app,false));
 
   const info=document.createElement("div");
+
   const h=document.createElement("h2");
   h.className="name";
   h.textContent=app.name;
+
   const p=document.createElement("p");
   p.textContent=app.txt[lang][0];
+
   info.append(h,p);
   main.appendChild(info);
 
@@ -545,26 +875,78 @@ function renderList(){
  }
 }
 
+function renderGuide(app){
+ const data=app.guide[lang];
+ const box=$("detailContent");
+ box.replaceChildren();
+
+ const h=document.createElement("h2");
+ h.textContent=data.title;
+ box.appendChild(h);
+
+ const list=document.createElement("ol");
+
+ data.steps.forEach(step=>{
+  const li=document.createElement("li");
+  li.textContent=step;
+  list.appendChild(li);
+ });
+
+ box.appendChild(list);
+
+ const note=document.createElement("p");
+ note.textContent=data.note;
+ box.appendChild(note);
+
+ const more=document.createElement("h2");
+ more.textContent=lang==="ar"?"مقالات ذات صلة":
+  lang==="fr"?"Articles associés":
+  lang==="tr"?"İlgili makaleler":"Related articles";
+
+ box.appendChild(more);
+
+ const links={
+  vpn:{url:"blog/what-is-vpn.html",ar:"ما هو VPN؟ ومتى تحتاجه فعلاً؟",en:"What is VPN?",fr:"Qu'est-ce qu'un VPN ?",tr:"VPN nedir?"},
+  astro:{url:"blog/astro-stacking.html",ar:"مقدمة إلى تكديس الصور الفلكية",en:"Astrophotography stacking",fr:"Empilement astrophotographique",tr:"Astrofotoğrafçılıkta istifleme"},
+  dub:{url:"blog/index.html",ar:"استكشف المقالات والشروحات",en:"Explore articles",fr:"Explorer les articles",tr:"Makaleleri keşfet"},
+  ide:{url:"blog/index.html",ar:"استكشف المقالات والشروحات",en:"Explore articles",fr:"Explorer les articles",tr:"Makaleleri keşfet"}
+ };
+
+ const linkData=links[app.id];
+ const a=document.createElement("a");
+ a.href=linkData.url;
+ a.textContent=linkData[lang];
+ box.appendChild(a);
+}
+
 function renderDetail(app){
  const box=$("detailCard");
  box.replaceChildren();
+
  box.appendChild(makeArt(app,true));
 
  const info=document.createElement("div");
  info.className="detail-info";
+
  const h=document.createElement("h1");
  h.textContent=app.name;
+
  const tag=document.createElement("p");
  tag.className="tag";
  tag.textContent=app.txt[lang][0];
- info.append(h,tag,makeActions(app,true));
+
+ const desc=document.createElement("p");
+ desc.textContent=app.txt[lang][1];
+
+ info.append(h,tag,desc,makeActions(app,true));
  box.appendChild(info);
 
- $("detailDesc").textContent=app.txt[lang][1];
+ renderGuide(app);
 }
 
 function route(){
  const app=APPS.find(a=>a.id===location.hash.slice(1));
+
  $("list").hidden=!!app;
  $("detail").hidden=!app;
 
@@ -580,32 +962,33 @@ function route(){
 
 function applyLang(code,save){
  lang=UI[code]?code:"ar";
+
  document.documentElement.lang=lang;
  document.documentElement.dir=LANGS[lang].dir;
- document.querySelectorAll("[data-k]").forEach(el=>el.textContent=t(el.dataset.k));
+
+ document.querySelectorAll("[data-k]").forEach(el=>{
+  el.textContent=t(el.dataset.k);
+ });
+
  $("lang").value=lang;
+
  if(save){
   try{localStorage.setItem("sari-lang",lang)}catch(e){}
  }
- route();
-}
 
-function buildLangOptions(){
- const sel=$("lang");
- Object.entries(LANGS).forEach(([code,m])=>{
-  const o=document.createElement("option");
-  o.value=code;
-  o.textContent=m.label;
-  sel.appendChild(o);
- });
- sel.addEventListener("change",e=>applyLang(e.target.value,true));
+ route();
 }
 
 window.addEventListener("hashchange",route);
 
+$("lang").addEventListener("change",e=>{
+ applyLang(e.target.value,true);
+});
+
 $("sbtn").addEventListener("click",()=>{
  const bar=$("searchbar");
  bar.hidden=!bar.hidden;
+
  if(!bar.hidden){
   $("q").focus();
  }else{
@@ -615,6 +998,7 @@ $("sbtn").addEventListener("click",()=>{
 });
 
 $("q").addEventListener("input",renderList);
+
 $("q").addEventListener("keydown",e=>{
  if(e.key==="Escape"){
   $("searchbar").hidden=true;
@@ -623,9 +1007,9 @@ $("q").addEventListener("keydown",e=>{
  }
 });
 
-buildLangOptions();
 $("year").textContent=new Date().getFullYear();
 applyLang(detectLang(),false);
 </script>
+
 </body>
 </html>
