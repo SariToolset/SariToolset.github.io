@@ -1,14 +1,36 @@
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#f5f5f7">
-<meta name="description" content="SariToolset — apps">
-<title>SariToolset — تطبيقات أندرويد</title>
+<meta name="description" content="SariToolset مجموعة تطبيقات أندرويد تشمل أدوات الخصوصية والاتصال، والترجمة والدبلجة، والبرمجة، والتصوير الفلكي ومعالجة الصور.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://saritoolset.github.io/">
+
+<title>SariToolset | تطبيقات وأدوات أندرويد</title>
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="SariToolset">
+<meta property="og:title" content="SariToolset | تطبيقات وأدوات أندرويد">
+<meta property="og:description" content="اكتشف مجموعة تطبيقات SariToolset وأدواتها للهواتف الذكية.">
+<meta property="og:url" content="https://saritoolset.github.io/">
+
 <meta name="google-adsense-account" content="ca-pub-1792078294671294">
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1792078294671294"
-     crossorigin="anonymous"></script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1792078294671294" crossorigin="anonymous"></script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"SariToolset",
+  "url":"https://saritoolset.github.io/",
+  "description":"مجموعة تطبيقات وأدوات أندرويد للخصوصية والبرمجة والترجمة والتصوير الفلكي.",
+  "inLanguage":["ar","en","fr","tr"]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
@@ -38,7 +60,6 @@
   --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px rgba(0,0,0,.35);
  }
 }
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
@@ -54,7 +75,6 @@ a{color:inherit;text-decoration:none}
 img{display:block;max-width:100%}
 [hidden]{display:none!important}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:10px}
-
 .wrap{width:min(960px,calc(100% - 40px));margin-inline:auto}
 
 /* HEADER */
@@ -79,7 +99,7 @@ header{
 .hero p{margin:0;color:var(--muted);font-size:17px}
 
 /* APP LIST */
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-bottom:64px}
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;padding-bottom:40px}
 .card{
  background:var(--surface);border-radius:24px;box-shadow:var(--shadow);
  padding:22px;display:flex;flex-direction:column;gap:20px;
@@ -129,13 +149,28 @@ header{
 .detail-info h1{margin:0 0 4px;font-size:34px;font-weight:800;letter-spacing:-.02em}
 .detail-info .tag{margin:0 0 22px;color:var(--muted);font-size:17px}
 .about{
- margin:20px 0 64px;background:var(--surface);border-radius:28px;box-shadow:var(--shadow);
+ margin:20px 0 40px;background:var(--surface);border-radius:28px;box-shadow:var(--shadow);
  padding:32px 40px;
 }
 .about h2{margin:0 0 10px;font-size:18px;font-weight:700}
 .about p{margin:0;color:var(--muted);line-height:1.9}
 
+/* CONTENT */
+.page{max-width:760px;margin:0 auto;padding:20px 0 50px}
+.page h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:0 0 8px}
+.page h2{font-size:21px;font-weight:700;margin:28px 0 8px}
+.page h3{font-size:17px;margin:20px 0 6px}
+.page p,.page li{color:var(--muted);line-height:1.95}
+.page ul{padding-inline-start:22px}
+.page a:not(.post-link){color:var(--accent);text-decoration:underline}
+.page code{direction:ltr;unicode-bidi:embed}
+.page .card{padding:30px;margin-top:18px}
+.post-link{display:block;padding:18px 0;border-bottom:1px solid var(--line);color:var(--text);font-weight:700;font-size:17px}
+.post-link span{display:block;color:var(--muted);font-weight:500;font-size:14px}
+
+/* FOOTER */
 footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+footer a:hover{color:var(--accent)}
 
 /* TOAST */
 .toast{
@@ -161,20 +196,8 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
 }
 .none{grid-column:1/-1;text-align:center;color:var(--muted);padding:40px 0}
 
-/* PAGES (policy, about, contact, articles) */
-.page{max-width:760px;margin:0 auto;padding:12px 0 40px}
-.page h1{font-size:30px;font-weight:800;letter-spacing:-.02em;margin:0 0 8px}
-.page h2{font-size:19px;font-weight:700;margin:26px 0 8px}
-.page p,.page li{color:var(--muted);line-height:1.9}
-.page ul{padding-inline-start:22px}
-.page code{direction:ltr;unicode-bidi:embed}
-.page .card{background:var(--surface);border-radius:24px;box-shadow:var(--shadow);padding:30px;margin-top:18px}
-.post-link{display:block;padding:18px 0;border-bottom:1px solid var(--line);color:var(--text);font-weight:700;font-size:17px}
-.post-link span{display:block;color:var(--muted);font-weight:500;font-size:14px}
-.page .btn{margin-top:12px}
-
 /* MOBILE */
-@media (max-width:680px){
+@media(max-width:680px){
  .wrap{width:calc(100% - 28px)}
  .grid{grid-template-columns:1fr;gap:14px}
  .hero{padding:40px 0 28px}
@@ -185,235 +208,289 @@ footer{padding:28px 0;text-align:center;color:var(--muted);font-size:13px;border
  .btn.big{width:100%}
  .detail .actions .btn{flex:1 1 auto}
 }
-@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media(prefers-reduced-motion:reduce){
+ *{transition:none!important;scroll-behavior:auto!important}
+}
 </style>
 </head>
 
 <body>
-
 <header>
  <div class="wrap bar">
   <button class="sbtn" id="sbtn" type="button" aria-label="Search">
-   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+   <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true">
+    <circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/>
+   </svg>
   </button>
   <a class="brand" href="#">SariToolset</a>
   <div class="lang"><select id="lang" aria-label="Language"></select></div>
  </div>
  <div class="searchbar" id="searchbar" hidden>
-  <input id="q" type="search" autocomplete="off" placeholder="…">
+  <input id="q" type="search" autocomplete="off" placeholder="بحث...">
  </div>
 </header>
 
 <main class="wrap">
 
- <!-- LIST -->
- <section id="list">
-  <div class="hero">
-   <h1 data-k="heroTitle"></h1>
-   <p data-k="heroSub"></p>
-  </div>
-  <div class="grid" id="grid"></div>
+<section id="list">
+ <div class="hero">
+  <h1 data-k="heroTitle">تطبيقات SariToolset</h1>
+  <p data-k="heroSub">مجموعة تطبيقات أندرويد وأدوات رقمية عملية.</p>
+ </div>
+
+ <div class="grid" id="grid">
+  <article class="card">
+   <a class="card-main" href="#vpn">
+    <div class="ph" style="--c1:#0a84ff;--c2:#5e5ce6">S</div>
+    <div><h2>Sari VPN</h2><p>اتصال VPN وأدوات الخصوصية وإدارة إعدادات الاتصال.</p></div>
+   </a>
+  </article>
+  <article class="card">
+   <a class="card-main" href="#dub">
+    <div class="ph" style="--c1:#ff9f0a;--c2:#ff375f">D</div>
+    <div><h2>SARI DUB</h2><p>ترجمة الفيديوهات والدبلجة وملفات الترجمة والصوت.</p></div>
+   </a>
+  </article>
+  <article class="card">
+   <a class="card-main" href="#ide">
+    <div class="ph" style="--c1:#34c759;--c2:#0fa3b1">I</div>
+    <div><h2>SARI IDE</h2><p>بيئة تطوير للهواتف لكتابة الأكواد وإدارة المشاريع.</p></div>
+   </a>
+  </article>
+  <article class="card">
+   <a class="card-main" href="#astro">
+    <div class="ph" style="--c1:#5e5ce6;--c2:#1c1a4d">A</div>
+    <div><h2>SARI Astro</h2><p>التصوير الفلكي ومحاذاة الصور وتكديسها.</p></div>
+   </a>
+  </article>
+ </div>
+
+ <section class="page" aria-label="معلومات عن SariToolset">
+  <h2>ما هو SariToolset؟</h2>
+  <p>SariToolset هو مشروع تقني يضم مجموعة تطبيقات أندرويد وأدوات رقمية. تهدف المجموعة إلى تقديم حلول عملية لمستخدمي الهواتف في مجالات الاتصال والخصوصية، والترجمة والدبلجة، وتطوير البرمجيات، والتصوير الفلكي ومعالجة الصور.</p>
+
+  <h2>تطبيقات مجموعة SariToolset</h2>
+
+  <h3>Sari VPN – الاتصال والخصوصية</h3>
+  <p>Sari VPN تطبيق لإدارة اتصالات VPN وإعدادات الاتصال. يوفر واجهة للوصول إلى خيارات الاتصال والخوادم المتاحة وفق إمكانيات الإصدار المستخدم.</p>
+
+  <h3>SARI DUB – ترجمة ودبلجة الفيديو</h3>
+  <p>SARI DUB مشروع لتسهيل ترجمة الفيديوهات ودبلجتها إلى لغات مختلفة، مع أدوات للتعامل مع ملفات الترجمة والصوت. ستُنشر معلومات الإصدار والتوفر عند إتاحة التطبيق.</p>
+
+  <h3>SARI IDE – البرمجة عبر الهاتف</h3>
+  <p>SARI IDE بيئة تطوير مخصصة للهواتف الذكية، وتهدف إلى مساعدة المطورين على كتابة الأكواد وتنظيم ملفات المصدر وإدارة المشاريع البرمجية باستخدام الهاتف.</p>
+
+  <h3>SARI Astro – التصوير الفلكي</h3>
+  <p>SARI Astro تطبيق للتصوير الفلكي ومعالجة صور السماء. يستخدم تقنيات محاذاة الصور وتكديس الإطارات للمساعدة في إبراز النجوم والتفاصيل الفلكية.</p>
+
+  <h2>تحميل التطبيقات والتحديثات</h2>
+  <p>استعرض بطاقات التطبيقات لمعرفة وصف كل تطبيق وحالة توفره. تظهر روابط التحميل عندما يكون الإصدار منشوراً، بينما تظهر التطبيقات التي لم تصدر بعد بحالة «قريباً». تحقق دائماً من متطلبات التطبيق ومصدر ملف التثبيت قبل تثبيته.</p>
+
+  <h2>الأسئلة الشائعة</h2>
+
+  <h3>هل جميع تطبيقات SariToolset متاحة للتحميل؟</h3>
+  <p>لا. يعتمد التوفر على حالة إصدار كل تطبيق. تعرض صفحة المجموعة حالة التطبيقات وروابط الإصدارات المنشورة فقط.</p>
+
+  <h3>هل التطبيقات مخصصة لأجهزة أندرويد؟</h3>
+  <p>المجموعة موجهة إلى أجهزة أندرويد، وقد تختلف إصدارات أندرويد ومتطلبات التشغيل من تطبيق إلى آخر.</p>
+
+  <h3>كيف أتواصل مع فريق SariToolset؟</h3>
+  <p>يمكنك استخدام صفحة <a href="contact.html">اتصل بنا</a> لإرسال الاستفسارات المتعلقة بالموقع والتطبيقات.</p>
+
+  <h2>معلومات وسياسات الموقع</h2>
+  <p>لمعرفة المزيد عن المشروع، اقرأ <a href="about.html">من نحن</a>، وراجع <a href="privacy.html">سياسة الخصوصية</a> و<a href="terms.html">شروط الاستخدام</a>. كما يمكنك زيارة <a href="blog/index.html">المقالات والشروحات</a>.</p>
  </section>
+</section>
 
- <!-- DETAIL -->
- <section id="detail" hidden>
-  <a class="back" href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg><span data-k="back"></span></a>
-  <div class="detail" id="detailCard"></div>
-  <div class="about"><p id="detailDesc"></p></div>
- </section>
+<section id="detail" hidden>
+ <a class="back" href="#">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round">
+   <path d="M9 6l6 6-6 6"/>
+  </svg>
+  <span data-k="back">رجوع</span>
+ </a>
+ <div class="detail" id="detailCard"></div>
+ <div class="about"><p id="detailDesc"></p></div>
+</section>
 
-
- </main>
+</main>
 
 <footer>
- © <span id="year"></span> SariToolset · <span data-k="rights"></span><br>
- <a href="about.html">من نحن</a> · <a href="blog/index.html">المقالات</a> · <a href="privacy.html">سياسة الخصوصية</a> · <a href="terms.html">شروط الاستخدام</a> · <a href="contact.html">اتصل بنا</a>
+ © <span id="year"></span> SariToolset · <span data-k="rights">جميع الحقوق محفوظة</span><br>
+ <a href="about.html">من نحن</a> ·
+ <a href="blog/index.html">المقالات</a> ·
+ <a href="privacy.html">سياسة الخصوصية</a> ·
+ <a href="terms.html">شروط الاستخدام</a> ·
+ <a href="contact.html">اتصل بنا</a>
 </footer>
 
 <div class="toast" id="toast" role="status" aria-live="polite"></div>
 
 <script>
-/* ───────── LANGUAGES ───────── */
-
-const LANGS = {
+const LANGS={
  ar:{label:"العربية",dir:"rtl"},
  en:{label:"English",dir:"ltr"},
  fr:{label:"Français",dir:"ltr"},
  tr:{label:"Türkçe",dir:"ltr"}
 };
 
-const UI = {
- ar:{heroTitle:"تطبيقاتنا",heroSub:"تطبيقات بسيطة وعملية من SariToolset.",download:"تحميل",share:"مشاركة",soon:"قريباً",back:"رجوع",copied:"تم نسخ رابط التطبيق",rights:"جميع الحقوق محفوظة",unavailable:"الملف غير متوفر حالياً، حاول لاحقاً",none:"لا توجد نتائج"},
- en:{heroTitle:"Our apps",heroSub:"Simple, practical apps from SariToolset.",download:"Download",share:"Share",soon:"Coming soon",back:"Back",copied:"App link copied",rights:"All rights reserved",unavailable:"File not available yet, please try later",none:"No results"},
- fr:{heroTitle:"Nos applications",heroSub:"Des applications simples et pratiques signées SariToolset.",download:"Télécharger",share:"Partager",soon:"Bientôt",back:"Retour",copied:"Lien copié",rights:"Tous droits réservés",unavailable:"Fichier indisponible pour le moment",none:"Aucun résultat"},
- tr:{heroTitle:"Uygulamalarımız",heroSub:"SariToolset'ten basit ve pratik uygulamalar.",download:"İndir",share:"Paylaş",soon:"Yakında",back:"Geri",copied:"Bağlantı kopyalandı",rights:"Tüm hakları saklıdır",unavailable:"Dosya şu an kullanılamıyor, daha sonra deneyin",none:"Sonuç bulunamadı"}
+const UI={
+ ar:{heroTitle:"تطبيقات SariToolset",heroSub:"مجموعة تطبيقات أندرويد وأدوات رقمية عملية من SariToolset.",download:"تحميل",share:"مشاركة",soon:"قريباً",back:"رجوع",copied:"تم نسخ رابط التطبيق",rights:"جميع الحقوق محفوظة",unavailable:"الملف غير متوفر حالياً، حاول لاحقاً",none:"لا توجد نتائج"},
+ en:{heroTitle:"SariToolset Apps",heroSub:"Android apps and practical digital tools from SariToolset.",download:"Download",share:"Share",soon:"Coming soon",back:"Back",copied:"App link copied",rights:"All rights reserved",unavailable:"File not available yet, please try later",none:"No results"},
+ fr:{heroTitle:"Applications SariToolset",heroSub:"Applications Android et outils numériques pratiques.",download:"Télécharger",share:"Partager",soon:"Bientôt",back:"Retour",copied:"Lien copié",rights:"Tous droits réservés",unavailable:"Fichier indisponible pour le moment",none:"Aucun résultat"},
+ tr:{heroTitle:"SariToolset Uygulamaları",heroSub:"Android uygulamaları ve pratik dijital araçlar.",download:"İndir",share:"Paylaş",soon:"Yakında",back:"Geri",copied:"Bağlantı kopyalandı",rights:"Tüm hakları saklıdır",unavailable:"Dosya şu an kullanılamıyor",none:"Sonuç bulunamadı"}
 };
 
-/* ───────── APPS ─────────
-   file: path to the APK on the same host (upload it next to this page in /downloads).
-   Set file:null for apps not released yet.                                        */
-
-const APPS = [
+const APPS=[
  {
-  id:"vpn", name:"Sari VPN", icon:"sari-vpn-icon-512.png", letter:"S",
-  c:["#0a84ff","#5e5ce6"], file:"downloads/sari-vpn.apk",
+  id:"vpn",name:"Sari VPN",icon:"sari-vpn-icon-512.png",letter:"S",
+  c:["#0a84ff","#5e5ce6"],file:"downloads/sari-vpn.apk",
   alt:"https://drive.google.com/uc?export=download&id=1REdf44l_SuUdrhzvTJJ1b7ax3i3wCu1B",
   txt:{
-   ar:["اتصال VPN وأدوات الخصوصية","تطبيق Sari VPN من مجموعة SariToolset، يوفر واجهة سهلة لإدارة اتصال VPN والوصول إلى إعدادات الاتصال والخوادم المتاحة داخل التطبيق."],
-   en:["VPN connection and privacy tools","Sari VPN, from the SariToolset family, offers a simple interface to manage your VPN connection and access connection settings and available servers within the app."],
-   fr:["Connexion VPN et outils de confidentialité","Sari VPN, de la famille SariToolset, offre une interface simple pour gérer votre connexion VPN et accéder aux paramètres et serveurs disponibles."],
-   tr:["VPN bağlantısı ve gizlilik araçları","SariToolset ailesinden Sari VPN, VPN bağlantınızı yönetmek ve uygulama içindeki sunuculara erişmek için basit bir arayüz sunar."]
+   ar:["اتصال VPN وأدوات الخصوصية","تطبيق Sari VPN من مجموعة SariToolset، يوفر واجهة لإدارة اتصال VPN والوصول إلى إعدادات الاتصال والخوادم المتاحة داخل التطبيق."],
+   en:["VPN connection and privacy tools","Sari VPN from SariToolset offers an interface to manage VPN connections and access available connection settings and servers."],
+   fr:["Connexion VPN et outils de confidentialité","Sari VPN offre une interface pour gérer les connexions VPN et accéder aux paramètres disponibles."],
+   tr:["VPN bağlantısı ve gizlilik araçları","Sari VPN, VPN bağlantınızı yönetmek ve mevcut bağlantı ayarlarına erişmek için bir arayüz sunar."]
   }
  },
  {
-  id:"dub", name:"SARI DUB", icon:null, letter:"D",
-  c:["#ff9f0a","#ff375f"], file:null,
+  id:"dub",name:"SARI DUB",icon:null,letter:"D",
+  c:["#ff9f0a","#ff375f"],file:null,
   txt:{
-   ar:["ترجمة ودبلجة الفيديوهات","تطبيق لترجمة ودبلجة الفيديوهات، يسهّل تحويل المحتوى إلى لغات مختلفة مع أدوات لملفات الترجمة والصوت."],
-   en:["Translate and dub your videos","An app for translating and dubbing videos, making it easier to convert content into different languages with subtitle and audio tools."],
-   fr:["Traduire et doubler vos vidéos","Une application pour traduire et doubler des vidéos, avec des outils pour les sous-titres et l’audio."],
-   tr:["Videolarınızı çevirin ve seslendirin","Videoları çevirmek ve seslendirmek için bir uygulama. Altyazı ve ses dosyaları için araçlar içerir."]
+   ar:["ترجمة ودبلجة الفيديوهات","تطبيق لترجمة ودبلجة الفيديوهات، مع أدوات لملفات الترجمة والصوت."],
+   en:["Translate and dub your videos","An app for translating and dubbing videos with subtitle and audio tools."],
+   fr:["Traduire et doubler vos vidéos","Une application pour traduire et doubler des vidéos avec des outils audio et sous-titres."],
+   tr:["Videoları çevirin ve seslendirin","Altyazı ve ses araçlarıyla videoları çevirmek ve seslendirmek için bir uygulama."]
   }
  },
  {
-  id:"ide", name:"SARI IDE", icon:null, letter:"I",
-  c:["#34c759","#0fa3b1"], file:null,
+  id:"ide",name:"SARI IDE",icon:null,letter:"I",
+  c:["#34c759","#0fa3b1"],file:null,
   txt:{
    ar:["بيئة تطوير وأدوات برمجية","بيئة تطوير مخصصة للهاتف من مجموعة SariToolset، لكتابة الأكواد وإدارة المشاريع البرمجية."],
-   en:["Development environment and coding tools","A mobile development environment from SariToolset for writing code and managing software projects."],
-   fr:["Environnement de développement et outils de code","Un environnement de développement mobile signé SariToolset, pour écrire du code et gérer vos projets."],
-   tr:["Geliştirme ortamı ve kod araçları","SariToolset'in telefon için geliştirme ortamı; kod yazmak ve yazılım projelerini yönetmek için."]
+   en:["Development environment and coding tools","A mobile development environment for writing code and managing software projects."],
+   fr:["Environnement de développement","Un environnement mobile pour écrire du code et gérer des projets logiciels."],
+   tr:["Geliştirme ortamı ve kod araçları","Kod yazmak ve yazılım projelerini yönetmek için mobil geliştirme ortamı."]
   }
  },
  {
-  id:"astro", name:"SARI Astro", icon:"Sari%20astro_2.jpg", letter:"A",
-  c:["#5e5ce6","#1c1a4d"], file:"downloads/sari-astro.apk",
+  id:"astro",name:"SARI Astro",icon:"Sari%20astro_2.jpg",letter:"A",
+  c:["#5e5ce6","#1c1a4d"],file:"downloads/sari-astro.apk",
   alt:"https://drive.google.com/uc?export=download&id=1hGxBrTKxnPPfu4ROkq5B-Fcq2ILM4CgG",
   txt:{
-   ar:["التصوير الفلكي ومعالجة الصور","SARI Astro تطبيق للتصوير الفلكي ومعالجة صور السماء. يستخدم محاذاة الصور وتقنيات التكديس لإبراز النجوم والتفاصيل الفلكية بوضوح."],
-   en:["Astrophotography and image processing","SARI Astro is an app for astrophotography and sky image processing. It uses image alignment and stacking to bring out stars and astronomical detail."],
-   fr:["Astrophotographie et traitement d’images","SARI Astro est une application d’astrophotographie. Alignement et empilement d’images mettent en valeur les étoiles et les détails célestes."],
-   tr:["Astrofotoğrafçılık ve görüntü işleme","SARI Astro, gökyüzü görüntülerini işleyen bir astrofotoğrafçılık uygulamasıdır. Hizalama ve yığınlama ile yıldızları ve detayları netleştirir."]
+   ar:["التصوير الفلكي ومعالجة الصور","SARI Astro تطبيق للتصوير الفلكي ومعالجة صور السماء. يستخدم محاذاة الصور وتكديس الإطارات لإبراز النجوم والتفاصيل الفلكية."],
+   en:["Astrophotography and image processing","SARI Astro processes sky images using alignment and stacking to reveal stars and astronomical details."],
+   fr:["Astrophotographie et traitement d’images","SARI Astro traite les images du ciel grâce à l'alignement et à l'empilement."],
+   tr:["Astrofotoğrafçılık ve görüntü işleme","SARI Astro, hizalama ve yığınlama ile gökyüzü görüntülerini işler."]
   }
  }
 ];
 
-const ICON_DL = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5v12"/><path d="M6.5 10.5L12 16l5.5-5.5"/><path d="M4 20.5h16"/></svg>';
-const ICON_SHARE = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5"/><path d="M7.5 8L12 3.5 16.5 8"/><path d="M8 12.5H6.5a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-4.5a2 2 0 0 0-2-2H16"/></svg>';
+const ICON_DL='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3.5v12"/><path d="M6.5 10.5L12 16l5.5-5.5"/><path d="M4 20.5h16"/></svg>';
+const ICON_SHARE='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 15V3.5"/><path d="M7.5 8L12 3.5 16.5 8"/><path d="M8 12.5H6.5a2 2 0 0 0-2 2V19a2 2 0 0 0 2 2h11a2 2 0 0 0 2-2v-4.5a2 2 0 0 0-2-2H16"/></svg>';
 
-/* ───────── STATE ───────── */
-
-const $ = id => document.getElementById(id);
-let lang = "en";
-const t = k => UI[lang][k];
+const $=id=>document.getElementById(id);
+let lang="ar";
+const t=k=>UI[lang][k];
 
 function detectLang(){
  try{
-  const saved = localStorage.getItem("sari-lang");
-  if(saved && UI[saved]) return saved;
+  const saved=localStorage.getItem("sari-lang");
+  if(saved&&UI[saved])return saved;
  }catch(e){}
- const list = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || "en"];
+ const list=navigator.languages&&navigator.languages.length?navigator.languages:[navigator.language||"ar"];
  for(const l of list){
-  const code = String(l).slice(0,2).toLowerCase();
-  if(UI[code]) return code;
+  const code=String(l).slice(0,2).toLowerCase();
+  if(UI[code])return code;
  }
- return "en";
+ return "ar";
 }
 
-/* ───────── BUILDERS ───────── */
-
-function makeArt(app, large){
+function makeArt(app,large){
  if(app.icon){
-  const img = new Image();
-  img.src = app.icon;
-  img.alt = app.name;
-  img.className = large ? "icon lg" : "icon";
-  img.onerror = () => img.replaceWith(makeLetter(app, large));
+  const img=new Image();
+  img.src=app.icon;
+  img.alt=app.name;
+  img.className=large?"icon lg":"icon";
+  img.onerror=()=>img.replaceWith(makeLetter(app,large));
   return img;
  }
- return makeLetter(app, large);
+ return makeLetter(app,large);
 }
 
-function makeLetter(app, large){
- const d = document.createElement("div");
- d.className = large ? "ph lg" : "ph";
- d.style.setProperty("--c1", app.c[0]);
- d.style.setProperty("--c2", app.c[1]);
- d.textContent = app.letter;
+function makeLetter(app,large){
+ const d=document.createElement("div");
+ d.className=large?"ph lg":"ph";
+ d.style.setProperty("--c1",app.c[0]);
+ d.style.setProperty("--c2",app.c[1]);
+ d.textContent=app.letter;
  d.setAttribute("aria-hidden","true");
  return d;
 }
 
-function makeActions(app, big){
- const wrap = document.createElement("div");
- wrap.className = "actions";
- const size = big ? " big" : "";
+function makeActions(app,big){
+ const wrap=document.createElement("div");
+ wrap.className="actions";
+ const size=big?" big":"";
 
  if(app.file){
-  const a = document.createElement("a");
-  a.className = "btn btn-dl" + size;
-  a.href = app.file;
-  a.setAttribute("download", "");
-  a.innerHTML = ICON_DL + "<span>" + t("download") + "</span>";
-  a.addEventListener("click", e => startDownload(app, e));
+  const a=document.createElement("a");
+  a.className="btn btn-dl"+size;
+  a.href=app.file;
+  a.setAttribute("download","");
+  a.innerHTML=ICON_DL+"<span>"+t("download")+"</span>";
+  a.addEventListener("click",e=>startDownload(app,e));
   wrap.appendChild(a);
  }else{
-  const s = document.createElement("span");
-  s.className = "btn btn-dl off" + size;
-  s.textContent = t("soon");
+  const s=document.createElement("span");
+  s.className="btn btn-dl off"+size;
+  s.textContent=t("soon");
   wrap.appendChild(s);
  }
 
- const sh = document.createElement("button");
- sh.type = "button";
- sh.className = "btn btn-share" + size;
- sh.innerHTML = ICON_SHARE + "<span>" + t("share") + "</span>";
- sh.addEventListener("click", () => shareApp(app));
+ const sh=document.createElement("button");
+ sh.type="button";
+ sh.className="btn btn-share"+size;
+ sh.innerHTML=ICON_SHARE+"<span>"+t("share")+"</span>";
+ sh.addEventListener("click",()=>shareApp(app));
  wrap.appendChild(sh);
-
  return wrap;
 }
 
-/* ───────── DOWNLOAD ───────── */
-
-async function startDownload(app, e){
+async function startDownload(app,e){
  e.preventDefault();
- let missing = false;
+ let missing=false;
  try{
-  const r = await fetch(app.file, {method:"HEAD", cache:"no-store"});
-  missing = r.status === 404;
+  const r=await fetch(app.file,{method:"HEAD",cache:"no-store"});
+  missing=!r.ok;
  }catch(err){
-  missing = false;
+  missing=false;
  }
-
  if(missing){
-  if(app.alt){ window.open(app.alt, "_blank", "noopener"); }
-  else{ toast(t("unavailable")); }
+  if(app.alt)window.open(app.alt,"_blank","noopener");
+  else toast(t("unavailable"));
   return;
  }
-
- const l = document.createElement("a");
- l.href = app.file;
- l.setAttribute("download", "");
+ const l=document.createElement("a");
+ l.href=app.file;
+ l.setAttribute("download","");
  document.body.appendChild(l);
  l.click();
  l.remove();
 }
 
-/* ───────── SHARE ───────── */
-
 function appUrl(app){
- return location.href.split("#")[0] + "#" + app.id;
+ return location.href.split("#")[0]+"#"+app.id;
 }
 
 async function shareApp(app){
- const url = appUrl(app);
+ const url=appUrl(app);
  if(navigator.share){
   try{
-   await navigator.share({title: app.name, text: app.name + " — SariToolset", url});
+   await navigator.share({title:app.name,text:app.name+" — SariToolset",url});
    return;
   }catch(e){
-   if(e && e.name === "AbortError") return;
+   if(e&&e.name==="AbortError")return;
   }
  }
  try{
@@ -426,129 +503,129 @@ async function shareApp(app){
 
 let toastTimer;
 function toast(msg){
- const el = $("toast");
- el.textContent = msg;
+ const el=$("toast");
+ el.textContent=msg;
  el.classList.add("show");
  clearTimeout(toastTimer);
- toastTimer = setTimeout(() => el.classList.remove("show"), 2400);
+ toastTimer=setTimeout(()=>el.classList.remove("show"),2400);
 }
 
-/* ───────── RENDER ───────── */
-
 function renderList(){
- const grid = $("grid");
+ const grid=$("grid");
  grid.replaceChildren();
- const q = ($("q").value || "").trim().toLowerCase();
- APPS.filter(app => (app.name + " " + app.txt[lang][0]).toLowerCase().includes(q)).forEach(app => {
-  const card = document.createElement("article");
-  card.className = "card";
+ const q=($("q").value||"").trim().toLowerCase();
 
-  const main = document.createElement("a");
-  main.className = "card-main";
-  main.href = "#" + app.id;
-  main.appendChild(makeArt(app, false));
+ APPS.filter(app=>(app.name+" "+app.txt[lang][0]).toLowerCase().includes(q)).forEach(app=>{
+  const card=document.createElement("article");
+  card.className="card";
 
-  const info = document.createElement("div");
-  const h = document.createElement("h2");
-  h.className = "name";
-  h.textContent = app.name;
-  const p = document.createElement("p");
-  p.textContent = app.txt[lang][0];
-  info.append(h, p);
+  const main=document.createElement("a");
+  main.className="card-main";
+  main.href="#"+app.id;
+  main.appendChild(makeArt(app,false));
+
+  const info=document.createElement("div");
+  const h=document.createElement("h2");
+  h.className="name";
+  h.textContent=app.name;
+  const p=document.createElement("p");
+  p.textContent=app.txt[lang][0];
+  info.append(h,p);
   main.appendChild(info);
 
-  card.append(main, makeActions(app, false));
+  card.append(main,makeActions(app,false));
   grid.appendChild(card);
  });
+
  if(!grid.children.length){
-  const p = document.createElement("p");
-  p.className = "none";
-  p.textContent = t("none");
+  const p=document.createElement("p");
+  p.className="none";
+  p.textContent=t("none");
   grid.appendChild(p);
  }
 }
 
 function renderDetail(app){
- const box = $("detailCard");
+ const box=$("detailCard");
  box.replaceChildren();
- box.appendChild(makeArt(app, true));
+ box.appendChild(makeArt(app,true));
 
- const info = document.createElement("div");
- info.className = "detail-info";
- const h = document.createElement("h1");
- h.textContent = app.name;
- const tag = document.createElement("p");
- tag.className = "tag";
- tag.textContent = app.txt[lang][0];
- info.append(h, tag, makeActions(app, true));
+ const info=document.createElement("div");
+ info.className="detail-info";
+ const h=document.createElement("h1");
+ h.textContent=app.name;
+ const tag=document.createElement("p");
+ tag.className="tag";
+ tag.textContent=app.txt[lang][0];
+ info.append(h,tag,makeActions(app,true));
  box.appendChild(info);
 
- $("detailDesc").textContent = app.txt[lang][1];
+ $("detailDesc").textContent=app.txt[lang][1];
 }
 
 function route(){
- const app = APPS.find(a => a.id === location.hash.slice(1));
- $("list").hidden = !!app;
- $("detail").hidden = !app;
+ const app=APPS.find(a=>a.id===location.hash.slice(1));
+ $("list").hidden=!!app;
+ $("detail").hidden=!app;
+
  if(app){
   renderDetail(app);
-  document.title = app.name + " — SariToolset";
+  document.title=app.name+" — SariToolset";
   window.scrollTo({top:0});
  }else{
   renderList();
-  document.title = "SariToolset";
+  document.title="SariToolset | تطبيقات وأدوات أندرويد";
  }
 }
 
-/* ───────── LANGUAGE ───────── */
-
-function applyLang(code, save){
- lang = UI[code] ? code : "en";
- document.documentElement.lang = lang;
- document.documentElement.dir = LANGS[lang].dir;
- document.querySelectorAll("[data-k]").forEach(el => el.textContent = t(el.dataset.k));
- $("lang").value = lang;
- if(save){ try{ localStorage.setItem("sari-lang", lang); }catch(e){} }
+function applyLang(code,save){
+ lang=UI[code]?code:"ar";
+ document.documentElement.lang=lang;
+ document.documentElement.dir=LANGS[lang].dir;
+ document.querySelectorAll("[data-k]").forEach(el=>el.textContent=t(el.dataset.k));
+ $("lang").value=lang;
+ if(save){
+  try{localStorage.setItem("sari-lang",lang)}catch(e){}
+ }
  route();
 }
 
 function buildLangOptions(){
- const sel = $("lang");
- Object.entries(LANGS).forEach(([code, m]) => {
-  const o = document.createElement("option");
-  o.value = code;
-  o.textContent = m.label;
+ const sel=$("lang");
+ Object.entries(LANGS).forEach(([code,m])=>{
+  const o=document.createElement("option");
+  o.value=code;
+  o.textContent=m.label;
   sel.appendChild(o);
  });
- sel.addEventListener("change", e => applyLang(e.target.value, true));
+ sel.addEventListener("change",e=>applyLang(e.target.value,true));
 }
 
-/* ───────── INIT ───────── */
+window.addEventListener("hashchange",route);
 
-window.addEventListener("hashchange", route);
-
-$("sbtn").addEventListener("click", () => {
- const bar = $("searchbar");
- bar.hidden = !bar.hidden;
+$("sbtn").addEventListener("click",()=>{
+ const bar=$("searchbar");
+ bar.hidden=!bar.hidden;
  if(!bar.hidden){
   $("q").focus();
  }else{
-  $("q").value = "";
+  $("q").value="";
   renderList();
  }
 });
-$("q").addEventListener("input", renderList);
-$("q").addEventListener("keydown", e => {
- if(e.key === "Escape"){
-  $("searchbar").hidden = true;
-  $("q").value = "";
-  renderList();
- }
-});
-buildLangOptions();
-$("year").textContent = new Date().getFullYear();
-applyLang(detectLang(), false);
-</script>
 
+$("q").addEventListener("input",renderList);
+$("q").addEventListener("keydown",e=>{
+ if(e.key==="Escape"){
+  $("searchbar").hidden=true;
+  $("q").value="";
+  renderList();
+ }
+});
+
+buildLangOptions();
+$("year").textContent=new Date().getFullYear();
+applyLang(detectLang(),false);
+</script>
 </body>
 </html>
