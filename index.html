@@ -121,13 +121,21 @@ header{
 }
 
 .header-controls{
- position:absolute;
- inset-inline-end:0;
- top:50%;
- transform:translateY(-50%);
- display:flex;
- align-items:center;
- gap:8px;
+.header-controls{
+  position:absolute;
+  inset-inline:0;
+  top:50%;
+  transform:translateY(-50%);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+  pointer-events:none;
+}
+
+.header-controls .language-wrap,
+.header-controls .sbtn{
+  pointer-events:auto;
 }
 
 .sbtn,.language-button{
